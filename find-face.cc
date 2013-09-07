@@ -93,10 +93,8 @@ int main(int argc, const char** argv)
         return 0;
 
       std::cout
-        << max_region->x / image_width << " "
-        << max_region->y / image_height << " "
-        << max_region->width / image_width << " "
-        << max_region->height / image_height << std::endl;
+          << "mogrify -crop " << max_region->width << "x" << max_region->height << "+" << max_region->x << "+" << max_region->y
+          << " " << input_name << std::endl;
     }
   }
 
